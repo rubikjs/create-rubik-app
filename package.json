@@ -1,22 +1,27 @@
 {
   "name": "create-rubik-app",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "One command to create a rubik app.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "bin": "./bin/create-rubik-app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rubikjs/create-rubik-app.git"
+    "url": "https://github.com/rubikjs/create-rubik-app.git"
   },
   "keywords": [
     "rubick"
   ],
-  "author": "Fancy",
+  "author": "Fancy <fancyboynet@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rubikjs/create-rubik-app/issues"
   },
-  "homepage": "https://github.com/rubikjs/create-rubik-app#readme"
+  "homepage": "https://github.com/rubikjs/create-rubik-app#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "download-git-repo": "^2.0.0",
+    "inquirer": "^7.0.0",
+    "shelljs": "^0.8.3",
+    "yargs": "^14.0.0"
+  }
 }
