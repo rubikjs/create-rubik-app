@@ -1,4 +1,5 @@
-# Create Rubik App
+# Create Rubik App 
+![npm](https://img.shields.io/npm/v/create-rubik-app?color=sucess)
 ## Init and select type delay
 ```
 $ npx create-rubik-app my-app
