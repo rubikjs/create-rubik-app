@@ -1,7 +1,8 @@
 # Create Rubik App 
 ![npm](https://img.shields.io/npm/v/create-rubik-app?color=sucess)
-
-![demo](assets/demo.svg)
+<p align='center'>
+<img src='assets/demo.svg' width='600' alt='demo'>
+</p>
 ## Init and select type delay
 ```
 $ npx create-rubik-app my-app
