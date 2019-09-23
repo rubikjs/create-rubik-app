@@ -3,6 +3,7 @@
 <p align='center'>
 <img src='assets/demo.svg' width='600' alt='demo'>
 </p>
+
 ## Init and select type delay
 ```
 $ npx create-rubik-app my-app
