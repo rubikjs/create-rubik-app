@@ -9,7 +9,7 @@
 $ npx create-rubik-app my-app
 ```
 ## Init with some type
-Supported type now: `library|pure|react|vue`
+Supported type now: `library|pure|react|vue|electron`
 ```
 $ npx create-rubik-app my-app --type react // init with react
 ```

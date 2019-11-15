@@ -10,7 +10,8 @@ const repo = {
   pure: 'rubikjs/rubik-pure-scaffold',
   vue: 'rubikjs/rubik-vue-scaffold',
   react: 'rubikjs/rubik-react-scaffold',
-  library: 'rubikjs/rubik-library-scaffold'
+  library: 'rubikjs/rubik-library-scaffold',
+  electron: 'rubikjs/rubik-electron-scaffold'
 }
 
 const appName = argv._[0]
@@ -61,7 +62,8 @@ function selectOfficialRepo () {
         'pure',
         'vue',
         'react',
-        'library'
+        'library',
+        'electron'
       ]
     }
   ])
