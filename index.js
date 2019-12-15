@@ -11,7 +11,8 @@ const repo = {
   vue: 'rubikjs/rubik-vue-scaffold',
   react: 'rubikjs/rubik-react-scaffold',
   library: 'rubikjs/rubik-library-scaffold',
-  electron: 'rubikjs/rubik-electron-scaffold'
+  electron: 'rubikjs/rubik-electron-scaffold',
+  'ant-design-pro-vue': 'rubikjs/rubik-ant-design-pro-vue'
 }
 
 const appName = argv._[0]
@@ -58,13 +59,7 @@ function selectOfficialRepo () {
       type: 'list',
       name: 'type',
       message: 'Choose the type.',
-      choices: [
-        'pure',
-        'vue',
-        'react',
-        'library',
-        'electron'
-      ]
+      choices: Object.keys(repo)
     }
   ])
   .then(answers => {
