@@ -16,15 +16,26 @@ const repo = {
 }
 
 const appName = argv._[0]
+
+process.on('exit', (code) => {
+  if (code === 2) {
+    removeRootDir()
+  }
+})
+
+process.on('SIGINT', function () {
+  process.exit(2)
+})
+
 if (!appName) {
   log.error('Please pass a app name.')
-  shell.exit(1)
+  process.exit(1)
 }
 const root = path.resolve(process.cwd(), appName)
 
 if (fs.existsSync(root)){
   log.error('The dir is exist, please choose another name.')
-  shell.exit(1)
+  process.exit(1)
 }
 makeRootDir()
 parseRepo()
@@ -46,8 +57,7 @@ function parseRepo () {
       return
     }
     log.error(`Invalid type!(${Object.keys(repo).join('|')})`)
-    removeRootDir()
-    shell.exit(1)
+    process.exit(2)
   }
   selectOfficialRepo()
 }
@@ -73,7 +83,7 @@ function downloadRepo (url, clone = false) {
   download(url, root, { clone: clone }, (err) => {
     if (err) {
       log.error(err.message)
-      removeRootDir()
+      process.exit(2)
       return
     }
     if (clone) {
